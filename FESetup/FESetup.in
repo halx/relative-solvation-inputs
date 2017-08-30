@@ -1,0 +1,36 @@
+logfile = all.log
+AFE.type = gromacs
+AFE.separate_vdw_elec = yes
+
+mdengine = gromacs, mdrun
+mdengine.postfix = -nt 2 -pin on
+
+
+[ligand]
+basedir = all
+
+file.name = solute.pdb
+morph_pairs = ethane > methanol, neopentane > methane, ethane > methane,
+        methanol > methane, 2-methylfuran > methane, toluene > methane,
+	2-methylindole > methane, 2-cyclopentanylindole > 7-cyclopentanylindole,
+# reverse:
+	methanol > ethane, methane > neopentane, methane > ethane,
+        methane > methanol, methane > 2-methylfuran, methane > toluene,
+        methane > 2-methylindole, 7-cyclopentanylindole > 2-cyclopentanylindole
+
+box.type = rectangular
+box.length = 12.0
+neutralize = yes
+min.nsteps = 0
+
+md.heat.nsteps = 3000
+md.heat.restraint = heavy
+md.heat.restr_force = 6.0
+
+md.press.nsteps = 20000
+md.press.restraint = heavy
+md.press.restr_force = 4.0
+
+md.relax.nsteps = 250
+md.relax.nrestr = 4
+md.relax.restraint = heavy

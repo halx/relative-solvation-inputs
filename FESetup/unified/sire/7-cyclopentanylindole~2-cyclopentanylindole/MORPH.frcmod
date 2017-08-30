@@ -1,0 +1,42 @@
+Remark line goes here
+MASS
+zz 1.000         0.000               ATTN, no polarizability parameter
+du 1.000         0.000               ATTN, no polarizability parameter
+
+BOND
+cd-zz    0.00   0.000       ATTN, need revision
+du-zz    0.00   0.000       ATTN, need revision
+du-du    0.00   0.000       ATTN, need revision
+
+ANGLE
+na-cd-zz    0.000       0.000   ATTN, need revision
+cc-cd-zz    0.000       0.000   ATTN, need revision
+cd-zz-du    0.000       0.000   ATTN, need revision
+du-du-zz    0.000       0.000   ATTN, need revision
+du-zz-du    0.000       0.000   ATTN, need revision
+du-du-du    0.000       0.000   ATTN, need revision
+
+DIHE
+ca-ca-cc-cd   4    2.800       180.000           2.000      same as X -c2-ca-X , penalty score=232.0
+ca-ca-cc-ha   4    2.800       180.000           2.000      same as X -c2-ca-X , penalty score=232.0
+na-cd-zz-du   1    0.000         0.000           0.000      ATTN, need revision
+cc-cd-zz-du   1    0.000         0.000           0.000      ATTN, need revision
+du-du-zz-cd   1    0.000         0.000           0.000      ATTN, need revision
+du-du-du-zz   1    0.000         0.000           0.000      ATTN, need revision
+du-du-zz-du   1    0.000         0.000           0.000      ATTN, need revision
+du-du-du-du   1    0.000         0.000           0.000      ATTN, need revision
+
+IMPROPER
+ca-ca-ca-ha         1.1          180.0         2.0          Using general improper torsional angle  X- X-ca-ha, penalty score=  6.0)
+ca-ca-ca-na         1.1          180.0         2.0          Using the default value
+ca-cd-na-hn         1.1          180.0         2.0          Using general improper torsional angle  X- X-na-hn, penalty score=  6.0)
+ca-ca-ca-cc         1.1          180.0         2.0          Using the default value
+ca-cd-cc-ha         1.1          180.0         2.0          Using the default value
+cc-na-cd-zz         1.1          180.0         2.0          Using the default value
+
+NONBON
+  zz          0.0000  0.0000             ATTN, need revision
+  du          0.0000  0.0000             ATTN, need revision
+
+
+

@@ -1,0 +1,14 @@
+minimization
+ &cntrl
+   imin = 1, ntmin = 2, maxcyc = 100, ncyc = 20, dx0 = 1e-10,
+   ntwe = 100, ntpr = 10, ntwr = 100,
+
+   ntc = 2, ntf = 1,
+   noshakemask = ':1,2',
+
+   icfe = 1, ifsc = 0, clambda = 0.00,
+   timask1 = ':1', timask2 = ':2',
+ /
+ &ewald
+ / 
+

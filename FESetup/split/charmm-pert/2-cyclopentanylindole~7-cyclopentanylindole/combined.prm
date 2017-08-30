@@ -1,0 +1,189 @@
+* created by FESetup
+*
+
+ATOMS
+MASS     1 GCA     12.01000
+MASS     2 GH4      1.00800
+MASS     3 GCC     12.01000
+MASS     4 GCD     12.01000
+MASS     5 GC3     12.01000
+MASS     6 GNA     14.01000
+MASS     7 GHA      1.00800
+MASS     8 GHC      1.00800
+MASS     9 GHCDU    1.00000
+MASS    10 GHN      1.00800
+MASS    11 GC3DU    1.00000
+
+BONDS
+GC3DU  GC3DU   300.90     1.5375
+GHA    GCA     345.80     1.0860
+GNA    GHN     408.40     1.0100
+GCD    GH4     352.00     1.0817
+GCC    GCD     500.90     1.3729
+GHA    GHCDU   330.60     1.0969
+GCA    GNA     420.50     1.3840
+GH4    GHCDU   330.60     1.0969
+GNA    GCD     425.80     1.3802
+GC3    GC3     300.90     1.5375
+GC3    GHC     330.60     1.0969
+GCA    GCA     461.10     1.3984
+GH4    GC3DU   300.90     1.5375
+GHA    GC3DU   300.90     1.5375
+GCD    GC3     334.80     1.5015
+GC3DU  GHCDU   330.60     1.0969
+GCA    GC3     321.00     1.5156
+GCA    GCC     385.10     1.4555
+GCC    GHA     349.10     1.0837
+
+ANGLES
+HW  OW  HW  100.0  104.52 !TIP3P water
+OW  HW  HW    0.0  127.74 !TIP3P water
+GCA    GHA    GC3DU    63.15   112.0700
+GCA    GCA    GCC      65.02   120.7901
+GHC    GC3    GHC      39.40   107.5800
+GHCDU  GH4    GC3DU    46.34   109.8000
+GCD    GCC    GHA      48.54   121.7601
+GCC    GCD    GC3      64.71   119.4501
+GHA    GCA    GCA      48.18   119.8801
+GCA    GCA    GCA      66.62   120.0201
+GHCDU  GC3DU  GHCDU    39.40   107.5800
+GNA    GCD    GC3      65.27   122.7301
+GCD    GC3    GC3      63.47   111.9300
+GC3DU  GC3DU  GC3DU    62.86   111.5100
+GHA    GC3DU  GHCDU    46.34   109.8000
+GNA    GCA    GCA      69.08   118.3401
+GCA    GC3    GHC      46.80   110.4700
+GCA    GCC    GHA      45.83   124.0401
+GHCDU  GHA    GC3DU    46.34   109.8000
+GC3DU  GH4    GC3DU    62.86   111.5100
+GHA    GC3DU  GC3DU    62.86   111.5100
+GNA    GCD    GCC      73.43   106.9900
+GCA    GNA    GHN      46.63   125.5401
+GCA    GCC    GCD      67.62   113.5100
+GH4    GC3DU  GC3DU    62.86   111.5100
+GCD    GH4    GC3DU    63.47   111.9300
+GC3    GCA    GCA      63.53   120.7701
+GCD    GNA    GHN      46.75   125.5001
+GCA    GNA    GCD      67.40   113.1500
+GC3DU  GHA    GC3DU    62.86   111.5100
+GC3DU  GC3DU  GHCDU    46.34   109.8000
+GCD    GH4    GHCDU    47.18   110.4900
+GC3    GC3    GHC      46.34   109.8000
+GCD    GC3    GHC      47.18   110.4900
+GH4    GC3DU  GHCDU    46.34   109.8000
+GCA    GC3    GC3      63.15   112.0700
+GC3    GC3    GC3      62.86   111.5100
+GCC    GCD    GH4      47.27   128.4801
+GNA    GCD    GH4      49.79   120.5301
+GCA    GHA    GHCDU    46.80   110.4700
+
+DIHEDRALS
+GH4    GC3DU  GC3DU  GC3DU      0.2000    1   180.0001
+GH4    GC3DU  GC3DU  GC3DU      0.2500    2   180.0001
+GH4    GC3DU  GC3DU  GC3DU      0.1800    3     0.0000
+GHCDU  GC3DU  GH4    GC3DU      0.1600    3     0.0000
+GCD    GH4    GC3DU  GHCDU      0.1556    3     0.0000
+GHA    GCA    GCA    GCC        3.6250    2   180.0001
+GC3DU  GC3DU  GC3DU  GC3DU      0.2000    1   180.0001
+GC3DU  GC3DU  GC3DU  GC3DU      0.2500    2   180.0001
+GC3DU  GC3DU  GC3DU  GC3DU      0.1800    3     0.0000
+GCC    GCD    GH4    GHCDU      0.0000    3     0.0000
+GNA    GCD    GH4    GC3DU      0.0000    3     0.0000
+GC3DU  GH4    GC3DU  GC3DU      0.2000    1   180.0001
+GC3DU  GH4    GC3DU  GC3DU      0.2500    2   180.0001
+GC3DU  GH4    GC3DU  GC3DU      0.1800    3     0.0000
+GHA    GCA    GCA    GC3        3.6250    2   180.0001
+GCA    GCA    GCC    GCD        0.7000    2   180.0001
+GCA    GCA    GNA    GCD        0.3000    2   180.0001
+GHCDU  GHA    GC3DU  GHCDU      0.1500    3     0.0000
+GCA    GCA    GCA    GNA        3.6250    2   180.0001
+GCA    GNA    GCD    GC3        1.7000    2   180.0001
+GCD    GC3    GC3    GHC        0.1556    3     0.0000
+GC3DU  GC3DU  GC3DU  GHCDU      0.1600    3     0.0000
+GCA    GHA    GC3DU  GC3DU      0.1556    3     0.0000
+GCA    GNA    GCD    GCC        1.7000    2   180.0001
+GCA    GCA    GHA    GC3DU      0.0000    2     0.0000
+GCC    GCD    GH4    GC3DU      0.0000    3     0.0000
+GNA    GCA    GCA    GCC        3.6250    2   180.0001
+GNA    GCD    GCC    GHA        4.0000    2   180.0001
+GCC    GCD    GNA    GHN        1.7000    2   180.0001
+GHN    GNA    GCD    GH4        1.7000    2   180.0001
+GCA    GCA    GCC    GHA        0.7000    2   180.0001
+GC3DU  GC3DU  GHA    GC3DU      0.2000    1   180.0001
+GC3DU  GC3DU  GHA    GC3DU      0.2500    2   180.0001
+GC3DU  GC3DU  GHA    GC3DU      0.1800    3     0.0000
+GHCDU  GC3DU  GC3DU  GHCDU      0.1500    3     0.0000
+GCD    GH4    GC3DU  GC3DU      0.1556    3     0.0000
+GCA    GCA    GCA    GHA        3.6250    2   180.0001
+GCA    GCA    GC3    GC3        0.0000    2     0.0000
+GHCDU  GH4    GC3DU  GC3DU      0.1600    3     0.0000
+GHA    GCA    GCA    GHA        3.6250    2   180.0001
+GHA    GC3DU  GC3DU  GHCDU      0.1600    3     0.0000
+GCA    GC3    GC3    GC3        0.1556    3     0.0000
+GCA    GCA    GCA    GCA        3.6250    2   180.0001
+GHCDU  GC3DU  GHA    GC3DU      0.1600    3     0.0000
+GHC    GC3    GC3    GC3        0.1600    3     0.0000
+GHCDU  GH4    GC3DU  GHCDU      0.1500    3     0.0000
+GCA    GCC    GCD    GH4        4.0000    2   180.0001
+GCA    GNA    GCD    GH4        1.7000    2   180.0001
+GC3    GC3    GC3    GC3        0.2000    1   180.0001
+GC3    GC3    GC3    GC3        0.2500    2   180.0001
+GC3    GC3    GC3    GC3        0.1800    3     0.0000
+GNA    GCD    GC3    GHC        0.0000    3     0.0000
+GH4    GC3DU  GC3DU  GHCDU      0.1600    3     0.0000
+GHA    GCC    GCD    GC3        4.0000    2   180.0001
+GNA    GCD    GH4    GHCDU      0.0000    3     0.0000
+GNA    GCD    GCC    GCA        4.0000    2   180.0001
+GCA    GCA    GNA    GHN        0.3000    2   180.0001
+GCA    GCA    GHA    GHCDU      0.0000    2     0.0000
+GC3    GCA    GCA    GCA        3.6250    2   180.0001
+GCC    GCD    GC3    GHC        0.0000    3     0.0000
+GCA    GHA    GC3DU  GHCDU      0.1556    3     0.0000
+GHA    GCC    GCD    GH4        4.0000    2   180.0001
+GCC    GCD    GC3    GC3        0.0000    3     0.0000
+GHCDU  GHA    GC3DU  GC3DU      0.1600    3     0.0000
+GCA    GC3    GC3    GHC        0.1556    3     0.0000
+GCA    GCA    GCA    GCC        3.6250    2   180.0001
+GHN    GNA    GCD    GC3        1.7000    2   180.0001
+GCD    GC3    GC3    GC3        0.1556    3     0.0000
+GC3DU  GHA    GC3DU  GC3DU      0.2000    1   180.0001
+GC3DU  GHA    GC3DU  GC3DU      0.2500    2   180.0001
+GC3DU  GHA    GC3DU  GC3DU      0.1800    3     0.0000
+GCA    GCA    GC3    GHC        0.0000    2     0.0000
+GHA    GC3DU  GC3DU  GC3DU      0.2000    1   180.0001
+GHA    GC3DU  GC3DU  GC3DU      0.2500    2   180.0001
+GHA    GC3DU  GC3DU  GC3DU      0.1800    3     0.0000
+GCA    GCC    GCD    GC3        4.0000    2   180.0001
+GHC    GC3    GC3    GHC        0.1500    3     0.0000
+GHA    GCA    GCA    GNA        3.6250    2   180.0001
+GC3DU  GC3DU  GH4    GC3DU      0.2000    1   180.0001
+GC3DU  GC3DU  GH4    GC3DU      0.2500    2   180.0001
+GC3DU  GC3DU  GH4    GC3DU      0.1800    3     0.0000
+GNA    GCD    GC3    GC3        0.0000    3     0.0000
+GC3    GCA    GCA    GNA        3.6250    2   180.0001
+
+IMPROPER
+GCA    GCA    GCA    GCC        1.1000    2   180.0001
+GC3    GCC    GCD    GNA        1.1000    2   180.0001
+GCA    GCA    GCA    GNA        1.1000    2   180.0001
+GCC    GH4    GCD    GNA        1.1000    2   180.0001
+GCA    GCA    GCA    GC3        1.1000    2   180.0001
+GCA    GCA    GCA    GHA        1.1000    2   180.0001
+GCA    GCD    GCC    GHA        1.1000    2   180.0001
+GCA    GCD    GNA    GHN        1.1000    2   180.0001
+
+NONBONDED  NBXMOD 5  ATOM CDIEL VATOM VSWITCH -
+  CTONNB 8.0 CTOFNB 10.0  CUTNB 12.0  EPS 1.0  E14FAC 0.83333333  WMIN 1.4
+GCA    0.0 -0.086000    1.9080 0.0 -0.043000    1.9080
+GH4    0.0 -0.015000    1.4090 0.0 -0.007500    1.4090
+GCC    0.0 -0.086000    1.9080 0.0 -0.043000    1.9080
+GCD    0.0 -0.086000    1.9080 0.0 -0.043000    1.9080
+GC3    0.0 -0.109400    1.9080 0.0 -0.054700    1.9080
+GNA    0.0 -0.170000    1.8240 0.0 -0.085000    1.8240
+GHA    0.0 -0.015000    1.4590 0.0 -0.007500    1.4590
+GHC    0.0 -0.015700    1.4870 0.0 -0.007850    1.4870
+GHCDU  0.0 -0.000000    0.0000 0.0 -0.000000    0.0000
+GHN    0.0 -0.015700    0.6000 0.0 -0.007850    0.6000
+GC3DU  0.0 -0.000000    0.0000 0.0 -0.000000    0.0000
+
+END

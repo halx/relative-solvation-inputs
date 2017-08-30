@@ -1,0 +1,16 @@
+; step 1/2: q_off and vdW on/off
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333
+
+[ atomtypes ]
+#include "pert1.atp"
+#include "pert1.itp"
+
+[ system ]
+FESetup
+
+[ molecules ]
+; Compound        nmols
+LIG 1

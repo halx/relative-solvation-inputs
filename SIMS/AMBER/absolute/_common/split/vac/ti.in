@@ -1,0 +1,15 @@
+TI simulation
+ &cntrl
+   imin = 0, nstlim = 10000000, irest = 0, ntx = 1, dt = 0.001,
+   ntt = 3, temp0 = 298.0, gamma_ln = 2.0, ig = -1,
+   ntb = 0, cut = 9999.0,
+   ioutfm = 1, iwrap = 0,
+   ntwe = 10000, ntwx = 10000, ntpr = 1000, ntwr = 500000, ntave = 500000,
+
+   ntc = 2, ntf = 1, tishake = 1,
+   noshakemask = ':1',
+
+   icfe = 1, ifsc = 0, clambda = %L%,
+   crgmask='%M%', 
+ /
+

@@ -1,0 +1,79 @@
+; TI/FEP mdp template for solution
+integrator               = sd
+ld-seed                  = -1
+bd-fric                  = 0
+dt                       = 0.001
+nsteps                   = 500000
+nstcomm                  = 100
+
+nstxout                  = 10000  ; != nstdhdl (in case of -rerun)
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 10000
+nstenergy                = 10000
+nstxtcout                = 0
+
+tcoupl                   = v-rescale
+nsttcouple               = 10
+tc_grps                  = System
+tau_t                    = 2.0
+ref_t                    = 298.0
+
+comm-mode                = Linear
+
+cutoff-scheme            = group
+nstcalclr                = 1
+nstlist                  = 10
+ns_type                  = grid
+pbc                      = xyz
+rlist                    = 0.8
+
+coulombtype              = PME
+coulomb-modifier         = none
+rcoulomb                 = 0.8
+fourierspacing           = 0.10
+pme_order                = 4
+ewald_rtol               = 1.0E-5
+optimize_fft             = yes
+
+vdwtype                  = cut-off
+vdw-modifier             = none
+rvdw                     = 0.8
+DispCorr                 = AllEnerPres
+
+pcoupl                   = Berendsen
+pcoupltype               = isotropic
+tau_p                    = 5.0
+compressibility          = 4.5e-5
+ref_p                    = 1.0
+refcoord-scaling         = com
+
+gen-vel                  = no
+
+constraints              = h-bonds
+constraint_algorithm     = Lincs
+continuation             = yes
+lincs_order              = 4
+lincs_warnangle          = 30
+
+; TI/FEP parameters
+free-energy              = yes
+delta-lambda             = 0
+init-lambda-state        = %L%
+; lambda paths: step 1: q_off (disappearing) followed by vdW on/off
+fep-lambdas              = 0.0 0.2 0.4 0.6 0.8 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0
+vdw-lambdas              = 0.0 0.0 0.0 0.0 0.0 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
+mass-lambdas             = 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+nstdhdl                  = 100
+calc-lambda-neighbors    = -1
+sc-alpha                 = 0.5
+sc-coul                  = yes
+sc-power                 = 1.0
+sc-r-power               = 6
+sc-sigma                 = 0.3
+dhdl-derivatives         = yes
+dhdl-print-energy        = no
+separate-dhdl-file       = yes
+dh_hist_size             = 0
+dh_hist_spacing          = 0.1
+

@@ -1,0 +1,51 @@
+
+Static FFT Slab Distribution:
+
+  FFT slabs assigned to    2 tasks
+  Maximum of   15 xy slabs per task
+  Maximum of   15 zx slabs per task
+  Count of FFT xy slabs assigned to each task:
+      15  15
+  Count of FFT xz slabs assigned to each task:
+      15  15
+
+Major Routine Parallel Profiling - NonSetup CPU Seconds:
+
+           D                                                              
+           a                                                              
+           t                                                              
+           a                              D                               
+           D         N                    i                               
+           i         o                    h                               
+           s         n             A      e      S      R      O         T
+   T       t         B      B      n      d      h      u      t         o
+   a       r         o      o      g      r      a      n      h         t
+   s       i         n      n      l      a      k      M      e         a
+   k       b         d      d      e      l      e      D      r         l
+------------------------------------------------------------------------------
+   0     0.0       2.7    0.0    0.0    0.0    0.0    0.1    0.0       2.9
+   1     0.0       2.8    0.0    0.0    0.0    0.0    0.0    0.0       2.8
+------------------------------------------------------------------------------
+ avg     0.0       2.7    0.0    0.0    0.0    0.0    0.0    0.0       2.8
+ min     0.0       2.7    0.0    0.0    0.0    0.0    0.0    0.0       2.8
+ max     0.0       2.8    0.0    0.0    0.0    0.0    0.1    0.0       2.9
+ std     0.0       0.0    0.0    0.0    0.0    0.0    0.0    0.0       0.0
+------------------------------------------------------------------------------
+
+PME NonBond Parallel Profiling - NonSetup CPU Seconds:
+
+                     D                           
+           P         i         R                 
+           a         r         e      L          
+           i         e         c      o          
+           r         c         i      a         T
+   T       l         t         p      d         o
+   a       i         F         F      B         t
+   s       s         r         r      a         a
+   k       t         c         c      l         l
+-------------------------------------------------
+   0     0.2       2.0       0.6    0.0       2.7
+   1     0.2       2.2       0.4    0.0       2.8
+-------------------------------------------------
+ avg     0.2       2.1       0.5    0.0       2.7
+-------------------------------------------------

@@ -1,0 +1,65 @@
+* relative AFE in vacuo
+* Please note that this input file is only intended as a rough template to
+* illustrate how a TI simulation would need to be set up
+*
+
+bomlev -2
+prnlev 5
+
+read rtf card name combined.rtf
+read param flex card name combined.prm
+
+ioformat extended
+read psf xplor card name "state0.psf"
+read coor card name "state0.cor"
+
+use amber
+
+format (i1)
+calc old = @step - 1
+set oldrst fe@old.rst
+
+format (f15.7)
+
+if @lambda .lt. 0 then set lambda 0
+if @lambda .gt. 1 then set lambda 1
+
+lower
+set base fe@step
+set rst @base.rst
+set dcd @base.dcd
+set en  @base.en
+set whamf @base.wham
+
+open unit 10 write form name @rst
+open unit 11 write unform name @dcd
+open unit 12 write form name @en
+open unit 22 read form name @oldrst
+open unit 54 write card name @whamf
+
+
+nbonds atom cdie shift vatom vswith cutnb 999.0 ctofnb 997.0
+update inbfrq -1 ihbfrq -1
+
+
+
+pert select segid AAAA end
+delete atoms select all end
+
+read psf xplor card name "state1.psf"
+read coor card name "state1.cor"
+
+
+
+prnlev 5
+
+scalar fbeta set 5.0 select all end
+
+dynamics langevin leap start nstep 500000 timestep 0.001 -
+  lstart 0.0 lambda @lambda lstop 1.0 wham 54 -
+    pstart 0 pstop 500000 pwindow pssp -
+  tbath 300.0 rbuf 0.0 ilbfrq 10 -
+  iunwri 10 iuncrd 11 kunit 12 iunrea 22 -
+  nsavc 10000 nprint 5000 iprfreq 20000 isvfrq 10000 ntrfrq 1000
+
+stop

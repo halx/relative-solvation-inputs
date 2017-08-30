@@ -1,0 +1,77 @@
+* relative AFE in a periodic solvent box
+* Please note that this input file is only intended as a rough template to
+* illustrate how a TI simulation would need to be set up
+*
+
+bomlev -2
+prnlev 5
+
+read rtf card name combined.rtf
+read param flex card name combined.prm
+
+ioformat extended
+read psf xplor card name "state0.psf"
+read coor card name "state0.cor"
+
+use amber
+
+format (i1)
+calc old = @step - 1
+set oldrst fe@old.rst
+
+format (f15.7)
+
+if @lambda .lt. 0 then set lambda 0
+if @lambda .gt. 1 then set lambda 1
+
+lower
+set base fe@step
+set rst @base.rst
+set dcd @base.dcd
+set en  @base.en
+set whamf @base.wham
+
+open unit 10 write form name @rst
+open unit 11 write unform name @dcd
+open unit 12 write form name @en
+open unit 22 read form name @oldrst
+open unit 54 write card name @whamf
+
+
+prnlev 5 node 0
+
+
+
+pert select segid AAAA end
+delete atoms select all end
+
+read psf xplor card name "state1.psf"
+read coor card name "state1.cor"
+
+
+
+crystal define orthorhombic 30.0 30.0 30.0 90.0 90.0 90.0
+
+open unit 21 read card name box.xtl
+crystal read card unit 21
+close unit 21
+
+! FIXME: other molecules than ligand and water
+image byres xcen 0.0 ycen 0.0 zcen 0.0 select segid AAAA .or. segid WATER end
+
+shake bonh tol 1.0e-6 para select segid WATER end
+update ctonnb 8.0 ctofnb 8.0 cutnb 10.0 atom vatom vswitch lrc -
+  inbfrq -1 imgfrq -1 cutim 10.0 bycb -
+  ewald pmew kappa 0.34 spline order 6 fftx 32 ffty 32 fftz 32 qcor 0.0
+
+scalar fbeta set 5.0 select all end
+
+dynamics leap verlet restart nstep 500000 timestep 0.001 -
+  lstart 0.0 lambda @lambda lstop 1.0 wham 54 -
+    pstart 20000 pstop 500000 pwindow pssp -
+  tconst berendsen treference 298.15 tcoupling 5.0 -
+  pconst preference 1.01325 compress 4.63e-5 pcoupling 5.0 -
+  iunwri 10 iuncrd 11 kunit 12 iunrea 22 -
+  nsavc 10000 nprint 5000 iprfreq 20000 isvfrq 10000 ntrfrq 1000
+
+stop

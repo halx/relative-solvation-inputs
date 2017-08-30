@@ -1,0 +1,2 @@
+windows="0.225 0.275 $(seq 0.0 0.05 1.0) 0.925 0.975 0.9875 0.99"
+windows=$(for w in $windows; do echo $w; done | sort -g)

@@ -1,0 +1,66 @@
+PSF EXT
+
+        2 !NTITLE
+* Created by FESetup
+* Note: this PSF is not suitable for domdec
+
+        12 !NATOM
+         1 AAAA     1        LIG      C1       GC3         -0.108400     12.010000       0
+         2 AAAA     1        LIG      H2       GHC          0.027100      1.008000       0
+         3 AAAA     1        LIG      DU6      GOSDU        0.000000      1.000000       0
+         4 AAAA     1        LIG      DU7      GCCDU        0.000000      1.000000       0
+         5 AAAA     1        LIG      DU8      GCDDU        0.000000      1.000000       0
+         6 AAAA     1        LIG      DU9      GCDDU        0.000000      1.000000       0
+         7 AAAA     1        LIG      H3       GHC          0.027100      1.008000       0
+         8 AAAA     1        LIG      H4       GHC          0.027100      1.008000       0
+         9 AAAA     1        LIG      H5       GHC          0.027100      1.008000       0
+        10 AAAA     1        LIG      DU10     GH4DU        0.000000      1.000000       0
+        11 AAAA     1        LIG      DU11     GHADU        0.000000      1.000000       0
+        12 AAAA     1        LIG      DU12     GHADU        0.000000      1.000000       0
+
+        12 !NBOND
+         1         2         1         7         1         8         1         9
+         2         3         2         6         3         4         4         5
+         4        10         5         6         5        11         6        12
+
+        19 !NTHETA
+         1         2         3         1         2         6         2         1         7
+         2         1         8         2         1         9         2         3         4
+         2         6         5         2         6        12         3         2         6
+         3         4         5         3         4        10         4         5         6
+         4         5        11         5         4        10         5         6        12
+         6         5        11         7         1         8         7         1         9
+         8         1         9
+
+        22 !NPHI
+         1         2         3         4         1         2         6         5
+         1         2         6        12         2         3         4         5
+         2         3         4        10         2         6         5         4
+         2         6         5        11         3         2         6         5
+         3         2         6        12         3         4         5         6
+         3         4         5        11         4         3         2         6
+         4         5         6        12         6         5         4        10
+         7         1         2         3         7         1         2         6
+         8         1         2         3         8         1         2         6
+         9         1         2         3         9         1         2         6
+        10         4         5        11        11         5         6        12
+
+         4 !NIMPHI
+         1         6         2         3         2         5         6        12
+         4         6         5        11         5        10         4         3
+
+         0 !NDON
+
+
+         0 !NACC
+
+
+         0 !NNB
+
+         0         0         0         0         0         0         0         0
+         0         0         0         0
+
+         1         0 !NGRP NST2
+         0         1         0
+
+         0         0 !NUMLP NUMLPH

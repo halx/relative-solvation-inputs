@@ -1,0 +1,16 @@
+source "leaprc.ff14SB"
+source "leaprc.gaff"
+loadAmberParams frcmod.ionsjc_tip3p
+loadAmberParams frcmod.ionslrcm_hfe_tip3p
+
+mod0 = loadAmberParams ligand.frcmod
+cmp0 = loadmol2 gaff.mol2
+cmp1 = loadPDB "ligand_removed.pdb"
+
+s = combine {cmp0 cmp0 cmp1}
+
+set default nocenter on
+setBox s centers {14.1839 14.1368 13.7812}
+
+saveAmberParm s "charge.parm7" "charge.rst7"
+quit

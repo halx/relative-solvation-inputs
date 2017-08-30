@@ -1,0 +1,14 @@
+source "leaprc.ff14SB"
+source "leaprc.gaff"
+
+mod0 = loadAmberParams MORPH0.frcmod
+cmp0 = loadmol2 MORPH0.mol2
+s = combine {cmp0}
+saveAmberParm s "state0.parm7" "state0.rst7"
+
+mod1 = loadAmberParams MORPH1.frcmod
+cmp1 = loadmol2 MORPH1.mol2
+s = combine {cmp1}
+saveAmberParm s "state1.parm7" "state1.rst7"
+
+quit

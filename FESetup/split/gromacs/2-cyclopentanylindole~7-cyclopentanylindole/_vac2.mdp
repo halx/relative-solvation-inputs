@@ -1,0 +1,68 @@
+; TI/FEP mdp template for vacuum
+integrator               = sd
+ld-seed                  = -1
+bd-fric                  = 0
+dt                       = 0.001
+nsteps                   = 2000000
+nstcomm                  = 100
+
+nstxout                  = 10000  ; != nstdhdl (in case of -rerun)
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 10000
+nstenergy                = 10000
+nstxtcout                = 0
+
+tcoupl                   = v-rescale
+nsttcouple               = 10
+tc_grps                  = System
+tau_t                    = 2.0
+ref_t                    = 298.0
+
+comm-mode                = Angular
+
+cutoff-scheme            = group
+nstlist                  = 0
+ns_type                  = simple
+pbc                      = no
+rlist                    = 0.0
+
+coulombtype              = cut-off
+coulomb-modifier         = none
+rcoulomb                 = 0.0
+
+vdwtype                  = cut-off
+vdw-modifier             = none
+rvdw                     = 0.0
+DispCorr                 = no
+
+pcoupl                   = No
+
+gen-vel                  = yes
+gen-temp                 = 298.0
+gen-seed                 = -1
+
+constraints              = none
+continuation             = no
+
+; TI/FEP parameters
+free-energy              = yes
+delta-lambda             = 0
+init-lambda-state        = %L%
+; lambda paths: step 2: q_on (appearing)
+fep-lambdas              = 0.0 0.2 0.4 0.6 0.8 1.0
+vdw-lambdas              = 0.0 0.2 0.4 0.6 0.8 1.0
+mass-lambdas             = 0.0 0.0 0.0 0.0 0.0 0.0
+nstdhdl                  = 100
+calc-lambda-neighbors    = -1
+sc-alpha                 = 0.5
+sc-coul                  = yes
+sc-power                 = 1.0
+sc-r-power               = 6
+sc-sigma                 = 0.3
+dhdl-derivatives         = yes
+dhdl-print-energy        = no
+separate-dhdl-file       = yes
+dh_hist_size             = 0
+dh_hist_spacing          = 0.1
+
