@@ -1,0 +1,376 @@
+CUDA DEVICES: 1
+lambda is:  0.1250
+
+Loading configuration information from file sim.cfg
+
+Running a somd-freenrg calculation using files SYSTEM.top, SYSTEM.crd and MORPH.pert.
+Using parameters:
+===============
+andersen == True
+barostat == False
+buffered coordinates frequency == 100
+center solute == True
+constraint == hbonds-notperturbed
+crdfile == SYSTEM.crd
+cutoff type == nocutoff
+energy frequency == 100
+equilibrate == False
+equilibration iterations == 5000
+lambda array == (0.0, 0.0625, 0.125, 0.1875, 0.25, 0.3125, 0.375, 0.4375, 0.5, 0.5625, 0.625, 0.6875, 0.75, 0.8125, 0.875, 0.9375, 1.0)
+lambda_val == 0.125
+minimal coordinate saving == True
+minimise == True
+morphfile == MORPH.pert
+ncycles == 100
+nmoves == 20000
+platform == CUDA
+precision == mixed
+save coordinates == True
+timestep == 0.002 ps
+topfile == SYSTEM.top
+===============
+### Running Single Topology Molecular Dynamics Free Energy on node007 ###
+###================Setting up calculation=====================###
+New run. Loading input and creating restart
+lambda is 0.125
+Create the System...
+Selecting dummy groups
+Creating force fields... 
+Setting up the simulation with random seed 635830
+Setting up moves...
+Created a MD move that uses OpenMM for all molecules on 0 
+Generated random seed number 635830 
+Saving restart
+Setting up sim file. 
+There are 29 atoms in the group 
+###===========================================================###
+
+###=======================Minimisation========================###
+Running minimisation.
+Energy before the minimisation: 29.3392 kcal mol-1
+Tolerance for minimisation: 1
+Maximum number of minimisation iterations: 1000
+
+==============================================================
+Sending anonymous Sire usage statistics to http://siremol.org.
+For more information, see http://siremol.org/analytics
+To disable, set the environment variable 'SIRE_DONT_PHONEHOME' to 1
+To see the information sent, set the environment variable 
+SIRE_VERBOSE_PHONEHOME equal to 1. To silence this message, set
+the environment variable SIRE_SILENT_PHONEHOME to 1.
+==============================================================
+
+Energy after the minimization: 24.4186 kcal mol-1
+Energy minimization done.
+###===========================================================###
+
+###====================somd-freenrg run=======================###
+Starting somd-freenrg run...
+20000 moves 100 cycles, 4000 ps simulation time
+
+Cycle =  1 
+
+
+Cycle =  2 
+
+
+Cycle =  3 
+
+
+Cycle =  4 
+
+
+Cycle =  5 
+
+
+Cycle =  6 
+
+
+Cycle =  7 
+
+
+Cycle =  8 
+
+
+Cycle =  9 
+
+
+Cycle =  10 
+
+
+Cycle =  11 
+
+
+Cycle =  12 
+
+
+Cycle =  13 
+
+
+Cycle =  14 
+
+
+Cycle =  15 
+
+
+Cycle =  16 
+
+
+Cycle =  17 
+
+
+Cycle =  18 
+
+
+Cycle =  19 
+
+
+Cycle =  20 
+
+
+Cycle =  21 
+
+
+Cycle =  22 
+
+
+Cycle =  23 
+
+
+Cycle =  24 
+
+
+Cycle =  25 
+
+
+Cycle =  26 
+
+
+Cycle =  27 
+
+
+Cycle =  28 
+
+
+Cycle =  29 
+
+
+Cycle =  30 
+
+
+Cycle =  31 
+
+
+Cycle =  32 
+
+
+Cycle =  33 
+
+
+Cycle =  34 
+
+
+Cycle =  35 
+
+
+Cycle =  36 
+
+
+Cycle =  37 
+
+
+Cycle =  38 
+
+
+Cycle =  39 
+
+
+Cycle =  40 
+
+
+Cycle =  41 
+
+
+Cycle =  42 
+
+
+Cycle =  43 
+
+
+Cycle =  44 
+
+
+Cycle =  45 
+
+
+Cycle =  46 
+
+
+Cycle =  47 
+
+
+Cycle =  48 
+
+
+Cycle =  49 
+
+
+Cycle =  50 
+
+
+Cycle =  51 
+
+
+Cycle =  52 
+
+
+Cycle =  53 
+
+
+Cycle =  54 
+
+
+Cycle =  55 
+
+
+Cycle =  56 
+
+
+Cycle =  57 
+
+
+Cycle =  58 
+
+
+Cycle =  59 
+
+
+Cycle =  60 
+
+
+Cycle =  61 
+
+
+Cycle =  62 
+
+
+Cycle =  63 
+
+
+Cycle =  64 
+
+
+Cycle =  65 
+
+
+Cycle =  66 
+
+
+Cycle =  67 
+
+
+Cycle =  68 
+
+
+Cycle =  69 
+
+
+Cycle =  70 
+
+
+Cycle =  71 
+
+
+Cycle =  72 
+
+
+Cycle =  73 
+
+
+Cycle =  74 
+
+
+Cycle =  75 
+
+
+Cycle =  76 
+
+
+Cycle =  77 
+
+
+Cycle =  78 
+
+
+Cycle =  79 
+
+
+Cycle =  80 
+
+
+Cycle =  81 
+
+
+Cycle =  82 
+
+
+Cycle =  83 
+
+
+Cycle =  84 
+
+
+Cycle =  85 
+
+
+Cycle =  86 
+
+
+Cycle =  87 
+
+
+Cycle =  88 
+
+
+Cycle =  89 
+
+
+Cycle =  90 
+
+
+Cycle =  91 
+
+
+Cycle =  92 
+
+
+Cycle =  93 
+
+
+Cycle =  94 
+
+
+Cycle =  95 
+
+
+Cycle =  96 
+
+
+Cycle =  97 
+
+
+Cycle =  98 
+
+
+Cycle =  99 
+
+
+Cycle =  100 
+
+Simulation took 452 s 
+###===========================================================###
+
+Clearing buffers...
+Backing up previous restart
+Saving new restart
+Starting /home/steboss/sire.app/bin/somd-freenrg: number of threads equals 32

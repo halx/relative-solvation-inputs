@@ -1,0 +1,49 @@
+Input files for absolute free energy calculations in Sire/SOMD
+
+Each folder has:
+
+*free:  folder with water phase input files:
+    * input: here the following files can be found:
+        * SYSTEM.top : topology of the system of interest
+        * SYSTEM.crd : coordinate file of the system of interest
+        * MORPH.pert.discharge: MORPH file for the discharging step
+        * MORPH.pert.vanish   : MORPH file for the vanishing step
+        * sim.cfg    : configuration file to run a simulation in Sire/SOMD
+    * discharge: output folder for the discharging step:
+        * FUNC.py : python script to postprocess the trajectory and extract the 
+                    DG_func term, as described in the paper
+        * coulcor.sh: bash script to automatically run FUNC.py in Sire/SOMD
+    * vanish:  output folder for the vanishing step:
+        * ljcor.sh: bash script to automatically run the Sire/SOMD Lennard-Jones
+                    long range corrections
+
+*vacuum: folder for the vacuum phase:
+    * input: here the following files can be found:
+        * SYSTEM.top : topology of the system of interest
+        * SYSTEM.crd : coordinate file of the system of interset
+        * MORPH.pert.discharge: MORPH file for the discharging step
+        * MORPH.pert.vanish   : MORPH file for the vanishing step
+        * sim.cfg : configuration file to run a simulation in Sire/SOMD
+    * discharge: output folder for the discharging step
+    * vanish: output folder for the vanishin step
+
+To extract the postprocess correction term, DG_func and DG_ljcor, after all the lambda
+windows have been run:
+
+```
+cd discharge/
+bash coulcor.sh
+
+cd ../vanish/
+bash ljcor_work.sh
+```
+
+```coulcor.sh``` will create:
+*freenrg-COULCOR.dat: DG_func correction term
+
+```ljcor_work.sh``` will create two files:
+*freenrg-LJCOR-lam-1.000.dat : LJ correction at lambda = 1.0
+*freenrg-LJCOR-lam-0.000.dat : LJ correction at lambda = 0.0
+
+(Remember DG_LJCOR = (LJ correction at lambda 1.0 ) - (LJ correction at lambda 0.0) )
+
