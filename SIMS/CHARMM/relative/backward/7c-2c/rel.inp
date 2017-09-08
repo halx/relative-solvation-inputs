@@ -1,0 +1,153 @@
+* relative AFE test in solution
+* ethane -> methanol
+*
+
+bomlev -2
+prnlev 5
+
+read rtf card name ../combined.rtf
+read param flex card name ../combined.prm
+
+ioformat extended
+read psf xplor card name "../state0.psf"   ! state 0 is methane
+read coor card name "../state0.cor"
+
+use amber
+
+format (i1)
+set cycle = @cycle   ! inputs win 0-20
+set win   = @win     ! cycle 1 - ??
+
+calc pcycle = @cycle - 1
+
+set base vdw_w@win
+set oldrst @{base}_i@{pcycle}.rst      ! previous restart
+set rst    @base_i@{cycle}.rst         ! restart file
+set dcd    @base_i@{cycle}.dcd         ! dcd file (trajectory)
+set whamf  @base_i@{cycle}.wham        ! wham stat (can be used to calculate free energy later on)
+
+open unit 10 write form name @rst
+open unit 11 write unform name @dcd
+open unit 54 write card name @whamf
+
+if cycle .gt. 1 then
+  open read unit 22 card name @oldrst
+endif
+
+format (f15.7)
+
+! evenly spaced, 21 windows from 0 to 1-stepsize
+set delta 0.05
+calc lambda @delta * @win
+set lstart 0
+set lstop 1
+
+prnlev 5 node 0
+
+pert select segid AAAA end
+scalar charge set 0.131931 sele segid AAAA .and. type H1 end
+scalar charge set -0.083069 sele segid AAAA .and. type C2 end
+scalar charge set -0.160069 sele segid AAAA .and. type C3 end
+scalar charge set 0.127931 sele segid AAAA .and. type H4 end
+scalar charge set -0.114069 sele segid AAAA .and. type C5 end
+scalar charge set 0.126931 sele segid AAAA .and. type H6 end
+scalar charge set -0.147069 sele segid AAAA .and. type C7 end
+scalar charge set -0.044269 sele segid AAAA .and. type C8 end
+scalar charge set -0.187469 sele segid AAAA .and. type N9 end
+scalar charge set -0.093869 sele segid AAAA .and. type C10 end
+scalar charge set -0.187269 sele segid AAAA .and. type C11 end
+scalar charge set -0.053369 sele segid AAAA .and. type C12 end
+scalar charge set 0.129931 sele segid AAAA .and. type C13 end
+scalar charge set 0.000000 sele segid AAAA .and. type H14 end
+scalar charge set 0.000000 sele segid AAAA .and. type C15 end
+scalar charge set 0.000000 sele segid AAAA .and. type H16 end
+scalar charge set 0.000000 sele segid AAAA .and. type H17 end
+scalar charge set 0.000000 sele segid AAAA .and. type C18 end
+scalar charge set 0.000000 sele segid AAAA .and. type H19 end
+scalar charge set 0.000000 sele segid AAAA .and. type H20 end
+scalar charge set 0.000000 sele segid AAAA .and. type C21 end
+scalar charge set 0.000000 sele segid AAAA .and. type H22 end
+scalar charge set 0.000000 sele segid AAAA .and. type H23 end
+scalar charge set 0.000000 sele segid AAAA .and. type C24 end
+scalar charge set 0.000000 sele segid AAAA .and. type H25 end
+scalar charge set 0.000000 sele segid AAAA .and. type H26 end
+scalar charge set 0.154931 sele segid AAAA .and. type H27 end
+scalar charge set -0.010569 sele segid AAAA .and. type H28 end
+scalar charge set 0.298631 sele segid AAAA .and. type H29 end
+scalar charge set 0.069631 sele segid AAAA .and. type DU30 end
+scalar charge set -0.080969 sele segid AAAA .and. type DU31 end
+scalar charge set 0.050631 sele segid AAAA .and. type DU32 end
+scalar charge set 0.050631 sele segid AAAA .and. type DU33 end
+scalar charge set -0.082969 sele segid AAAA .and. type DU34 end
+scalar charge set 0.041631 sele segid AAAA .and. type DU35 end
+scalar charge set 0.041631 sele segid AAAA .and. type DU36 end
+scalar charge set -0.082969 sele segid AAAA .and. type DU37 end
+scalar charge set 0.041631 sele segid AAAA .and. type DU38 end
+scalar charge set 0.041631 sele segid AAAA .and. type DU39 end
+scalar charge set -0.080969 sele segid AAAA .and. type DU40 end
+scalar charge set 0.050631 sele segid AAAA .and. type DU41 end
+scalar charge set 0.050631 sele segid AAAA .and. type DU42 end
+scalar type set 7 sele segid AAAA .and. type C13 end
+scalar type set 5 sele segid AAAA .and. type H14 end
+scalar type set 13 sele segid AAAA .and. type C15 end
+scalar type set 5 sele segid AAAA .and. type H16 end
+scalar type set 5 sele segid AAAA .and. type H17 end
+scalar type set 13 sele segid AAAA .and. type C18 end
+scalar type set 5 sele segid AAAA .and. type H19 end
+scalar type set 5 sele segid AAAA .and. type H20 end
+scalar type set 13 sele segid AAAA .and. type C21 end
+scalar type set 5 sele segid AAAA .and. type H22 end
+scalar type set 5 sele segid AAAA .and. type H23 end
+scalar type set 13 sele segid AAAA .and. type C24 end
+scalar type set 5 sele segid AAAA .and. type H25 end
+scalar type set 5 sele segid AAAA .and. type H26 end
+scalar type set 11 sele segid AAAA .and. type H28 end
+scalar type set 8 sele segid AAAA .and. type DU30 end
+scalar type set 11 sele segid AAAA .and. type DU31 end
+scalar type set 8 sele segid AAAA .and. type DU32 end
+scalar type set 8 sele segid AAAA .and. type DU33 end
+scalar type set 11 sele segid AAAA .and. type DU34 end
+scalar type set 8 sele segid AAAA .and. type DU35 end
+scalar type set 8 sele segid AAAA .and. type DU36 end
+scalar type set 11 sele segid AAAA .and. type DU37 end
+scalar type set 8 sele segid AAAA .and. type DU38 end
+scalar type set 8 sele segid AAAA .and. type DU39 end
+scalar type set 11 sele segid AAAA .and. type DU40 end
+scalar type set 8 sele segid AAAA .and. type DU41 end
+scalar type set 8 sele segid AAAA .and. type DU42 end
+
+crystal define orthorhombic 30.0 30.0 30.0 90.0 90.0 90.0
+
+open unit 21 read card name ../box.xtl
+crystal read card unit 21
+close unit 21
+image byres xcen 0.0 ycen 0.0 zcen 0.0 select segid AAAA .or. segid WATER end
+
+mini sd nstep 1000 nprint 100
+mini abnr nstep 1000 nprint 100
+
+shake bonh tol 1.0e-6 para select segid WATER end
+update ctonnb 10.0 ctofnb 12.0 cutnb 14.0 atom vatom vswitch -
+  inbfrq -1 imgfrq -1 cutim 10.0 bycb -
+  ewald pmew kappa 0.34 spline order 6 fftx 32 ffty 32 fftz 32 qcor 0.0
+
+set soption = start
+set iunit   = -1
+set tstep   = 0.001
+
+set temp = 298.15
+
+dynamics CPT leap @soption nstep 2000000 timestep @tstep -
+    lstart 0 lambda @lambda lstop 1 wham 54 -
+    pstart 0 pstop 2000000 pwindow pssp -
+    PCONst  pref   1.01325  compress 4.63e-5  pcoupling 5.0 -
+    TCONst  berendsen TCOUpling 5.0  TREFerence @temp FIRSTT @temp -
+    iunwri 10 iuncrd 11 kunit 12 iunrea 22 -
+    nsavc 10000 nprint 1000 iprfreq 1000 isvfrq 1000 ntrfrq 1000 -
+    IASORS 1 IASVEL 1 ISCVEL 0 ICHECW 0 TWINDH 0.0 TWINDL 0.0
+
+open write card unit 18 name @{base}.pdb
+write coor pdb unit 18
+close unit 18
+
+stop

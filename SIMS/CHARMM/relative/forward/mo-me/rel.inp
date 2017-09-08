@@ -1,0 +1,82 @@
+* relative AFE test in solution
+* WHAM
+*
+
+bomlev -2
+prnlev 5
+
+read rtf card name ../combined.rtf
+read param flex card name ../combined.prm
+
+ioformat extended
+read psf xplor card name "../state0.psf"   ! state 0 is left-stated one
+read coor card name "../state0.cor"
+
+use amber
+
+format (i1)
+set cycle = @cycle   ! cycle 1 - ??
+set win   = @win     ! win 0 - 20
+
+calc pcycle = @cycle - 1
+
+set base chg_w@win
+set oldrst @{base}_i@{pcycle}.rst      ! previous restart
+set rst    @base_i@{cycle}.rst         ! restart file
+set dcd    @base_i@{cycle}.dcd         ! dcd file (trajectory)
+set whamf  @base_i@{cycle}.wham        ! wham stat (can be used to calculate free energy later on)
+
+open unit 10 write form name @rst
+open unit 11 write unform name @dcd
+open unit 54 write card name @whamf
+
+if cycle .gt. 1 then
+  open read unit 22 card name @oldrst
+endif
+
+format (f15.7)
+
+! evenly spaced, 21 windows from 0 to 1-stepsize
+set delta 0.05
+calc lambda @delta * @win
+set lstart 0
+set lstop 1
+
+prnlev 5 node 0
+
+pert select segid AAAA end
+delete atoms select all end
+
+read psf xplor card name "../state1.psf"
+read coor card name "../state1.cor"
+
+crystal define orthorhombic 30.0 30.0 30.0 90.0 90.0 90.0
+
+open unit 21 read card name ../box.xtl
+crystal read card unit 21
+close unit 21
+image byres xcen 0.0 ycen 0.0 zcen 0.0 select segid AAAA .or. segid WATER end
+
+shake bonh tol 1.0e-6 para select segid WATER end
+update ctonnb 10.0 ctofnb 12.0 cutnb 14.0 atom vatom vswitch -
+  inbfrq -1 imgfrq -1 cutim 10.0 bycb -
+  ewald pmew kappa 0.34 spline order 6 fftx 32 ffty 32 fftz 32 qcor 0.0
+
+set iunit   = -1
+
+set temp = 298.15
+
+dynamics CPT leap start nstep 2000000 timestep 0.001 echeck 9e99 -
+    lstart 0 lambda @lambda lstop 1 wham 54 -
+    pstart 0 pstop 2000000 pwindow pssp -
+    PCONst  pref   1.01325  compress 4.63e-5  pcoupling 5.0 -
+    TCONst berendsen TCOUpling 5.0  TREFerence @temp FIRSTT @temp -
+    iunwri 10 iuncrd 11 kunit 12 iunrea 22 -
+    nsavc 10000 nprint 1000 iprfreq 1000 isvfrq 1000 ntrfrq 1000 -
+    IASORS 1 IASVEL 1 ISCVEL 0 ICHECW 0 TWINDH 0.0 TWINDL 0.0
+
+open write card unit 18 name @{base}.pdb
+write coor pdb unit 18
+close unit 18
+
+stop
