@@ -1,0 +1,12 @@
+trajin ti001_1.nc
+
+distance d1 ":1@C1" ":1@H2" out d1.dat
+distance d2 ":1@C1" ":1@H3" out d2.dat
+distance d3 ":1@C1" ":1@H4" out d3.dat
+distance d4 ":1@C1" ":1@H5" out d4.dat
+
+go
+avg(d1)
+avg(d2)
+avg(d3)
+avg(d4)

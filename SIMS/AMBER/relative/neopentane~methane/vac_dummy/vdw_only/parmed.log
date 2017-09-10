@@ -1,0 +1,4 @@
+# Log started on 02/16/2017 [mm/dd/yyyy] at 08:10:17
+addLJType @H= radius 0.0 epsilon 0.0
+parmout state1.parm
+go

@@ -1,0 +1,3 @@
+# this is a template group file for multi-sander, edit output files as needed
+-i vdw_a.in -p state0.parm7 -c state0.rst7 -O -inf ti001_0.info -o ti001_0.out -r ti001_0.rst7 -e ti001_0.en -x ti001_0.nc
+-i vdw_b.in -p state1.parm7 -c state1.rst7 -O -inf ti001_1.info -o ti001_1.out -r ti001_1.rst7 -e ti001_1.en -x ti001_1.nc

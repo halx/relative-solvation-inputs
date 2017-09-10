@@ -1,0 +1,3 @@
+trajin ti001_0.nc
+
+dihedral t1 ":1@N3" ":1@C2" ":1@C1" ":1@H12" out dihed.dat

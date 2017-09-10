@@ -1,0 +1,243 @@
+Started on Mon Jan 30 18:32:55 2017
+
+=== Alchemical Analysis 1.1.0 ===
+
+Command line: /home/hhl/projects/aa_branches/refactor/alchemical_analysis/alchemical_analysis.py -a AMBER --parser-options write_grads:write_mbar_all:write_mbar_ave -m ti+ti_cubic+bar+mbar -d . -p [01].*/ti0?? -q out -r 5 -u kcal -s 200 -g -o test_aa
+
+--- Parser Amber starts ---
+
+Loaded in data from ./0.40/ti003.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.40/ti001.out: 1001 data points, 5 DV/DL averages
+Loaded in data from ./0.40/ti005.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.40/ti002.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.40/ti004.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.70/ti003.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.70/ti001.out: 1001 data points, 5 DV/DL averages; 3 MBAR energies were not displayed
+Loaded in data from ./0.70/ti005.out: 1000 data points, 5 DV/DL averages; 2 MBAR energies were not displayed
+Loaded in data from ./0.70/ti002.out: 1000 data points, 5 DV/DL averages; 2 MBAR energies were not displayed
+Loaded in data from ./0.70/ti004.out: 1000 data points, 5 DV/DL averages; 1 MBAR energy was not displayed
+Loaded in data from ./0.95/ti003.out: 1000 data points, 5 DV/DL averages; 17 MBAR energies were not displayed
+Loaded in data from ./0.95/ti001.out: 1001 data points, 5 DV/DL averages; 20 MBAR energies were not displayed
+Loaded in data from ./0.95/ti005.out: 1000 data points, 5 DV/DL averages; 15 MBAR energies were not displayed
+Loaded in data from ./0.95/ti002.out: 1000 data points, 5 DV/DL averages; 12 MBAR energies were not displayed
+Loaded in data from ./0.95/ti004.out: 1000 data points, 5 DV/DL averages; 19 MBAR energies were not displayed
+Loaded in data from ./0.35/ti003.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.35/ti001.out: 1001 data points, 5 DV/DL averages
+Loaded in data from ./0.35/ti005.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.35/ti002.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.35/ti004.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.20/ti003.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.20/ti001.out: 1001 data points, 5 DV/DL averages
+Loaded in data from ./0.20/ti005.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.20/ti002.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.20/ti004.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.65/ti003.out: 1000 data points, 5 DV/DL averages; 1 MBAR energy was not displayed
+Loaded in data from ./0.65/ti001.out: 1001 data points, 5 DV/DL averages; 1 MBAR energy was not displayed
+Loaded in data from ./0.65/ti005.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.65/ti002.out: 1000 data points, 5 DV/DL averages; 1 MBAR energy was not displayed
+Loaded in data from ./0.65/ti004.out: 1000 data points, 5 DV/DL averages; 1 MBAR energy was not displayed
+Loaded in data from ./0.25/ti003.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.25/ti001.out: 1001 data points, 5 DV/DL averages
+Loaded in data from ./0.25/ti005.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.25/ti002.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.25/ti004.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.90/ti003.out: 1000 data points, 5 DV/DL averages; 10 MBAR energies were not displayed
+Loaded in data from ./0.90/ti001.out: 1001 data points, 5 DV/DL averages; 15 MBAR energies were not displayed
+Loaded in data from ./0.90/ti005.out: 1000 data points, 5 DV/DL averages; 11 MBAR energies were not displayed
+Loaded in data from ./0.90/ti002.out: 1000 data points, 5 DV/DL averages; 14 MBAR energies were not displayed
+Loaded in data from ./0.90/ti004.out: 1000 data points, 5 DV/DL averages; 20 MBAR energies were not displayed
+Loaded in data from ./0.80/ti003.out: 1000 data points, 5 DV/DL averages; 11 MBAR energies were not displayed
+Loaded in data from ./0.80/ti001.out: 1001 data points, 5 DV/DL averages; 6 MBAR energies were not displayed
+Loaded in data from ./0.80/ti005.out: 1000 data points, 5 DV/DL averages; 7 MBAR energies were not displayed
+Loaded in data from ./0.80/ti002.out: 1000 data points, 5 DV/DL averages; 12 MBAR energies were not displayed
+Loaded in data from ./0.80/ti004.out: 1000 data points, 5 DV/DL averages; 7 MBAR energies were not displayed
+Loaded in data from ./0.45/ti003.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.45/ti001.out: 1001 data points, 5 DV/DL averages
+Loaded in data from ./0.45/ti005.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.45/ti002.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.45/ti004.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.55/ti003.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.55/ti001.out: 1001 data points, 5 DV/DL averages
+Loaded in data from ./0.55/ti005.out: 1000 data points, 5 DV/DL averages; 1 MBAR energy was not displayed
+Loaded in data from ./0.55/ti002.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.55/ti004.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./1.00/ti003.out: 1000 data points, 5 DV/DL averages; 11 MBAR energies were not displayed
+Loaded in data from ./1.00/ti001.out: 1001 data points, 5 DV/DL averages; 13 MBAR energies were not displayed
+Loaded in data from ./1.00/ti005.out: 1000 data points, 5 DV/DL averages; 12 MBAR energies were not displayed
+Loaded in data from ./1.00/ti002.out: 1000 data points, 5 DV/DL averages; 11 MBAR energies were not displayed
+Loaded in data from ./1.00/ti004.out: 1000 data points, 5 DV/DL averages; 12 MBAR energies were not displayed
+Loaded in data from ./0.85/ti003.out: 1000 data points, 5 DV/DL averages; 16 MBAR energies were not displayed
+Loaded in data from ./0.85/ti001.out: 1001 data points, 5 DV/DL averages; 13 MBAR energies were not displayed
+Loaded in data from ./0.85/ti005.out: 1000 data points, 5 DV/DL averages; 19 MBAR energies were not displayed
+Loaded in data from ./0.85/ti002.out: 1000 data points, 5 DV/DL averages; 7 MBAR energies were not displayed
+Loaded in data from ./0.85/ti004.out: 1000 data points, 5 DV/DL averages; 18 MBAR energies were not displayed
+Loaded in data from ./0.75/ti003.out: 1000 data points, 5 DV/DL averages; 7 MBAR energies were not displayed
+Loaded in data from ./0.75/ti001.out: 1001 data points, 5 DV/DL averages; 4 MBAR energies were not displayed
+Loaded in data from ./0.75/ti005.out: 1000 data points, 5 DV/DL averages; 9 MBAR energies were not displayed
+Loaded in data from ./0.75/ti002.out: 1000 data points, 5 DV/DL averages; 6 MBAR energies were not displayed
+Loaded in data from ./0.75/ti004.out: 1000 data points, 5 DV/DL averages; 5 MBAR energies were not displayed
+Loaded in data from ./0.05/ti003.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.05/ti001.out: 1001 data points, 5 DV/DL averages
+Loaded in data from ./0.05/ti005.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.05/ti002.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.05/ti004.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.60/ti003.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.60/ti001.out: 1001 data points, 5 DV/DL averages
+Loaded in data from ./0.60/ti005.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.60/ti002.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.60/ti004.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.15/ti003.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.15/ti001.out: 1001 data points, 5 DV/DL averages
+Loaded in data from ./0.15/ti005.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.15/ti002.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.15/ti004.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.10/ti003.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.10/ti001.out: 1001 data points, 5 DV/DL averages
+Loaded in data from ./0.10/ti005.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.10/ti002.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.10/ti004.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.50/ti003.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.50/ti001.out: 1001 data points, 5 DV/DL averages
+Loaded in data from ./0.50/ti005.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.50/ti002.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.50/ti004.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.30/ti003.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.30/ti001.out: 1001 data points, 5 DV/DL averages
+Loaded in data from ./0.30/ti005.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.30/ti002.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.30/ti004.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.00/ti003.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.00/ti001.out: 1001 data points, 5 DV/DL averages
+Loaded in data from ./0.00/ti005.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.00/ti002.out: 1000 data points, 5 DV/DL averages
+Loaded in data from ./0.00/ti004.out: 1000 data points, 5 DV/DL averages
+
+Sorting input data by starting time
+
+Skipping first 400 steps (= 200.000000 ps)
+
+
+The gradients (DV/DL) from the correlated samples (kcal/mol):
+
+Lambda   gradient
+-----------------
+0.00000    63.455
+0.05000    58.000
+0.10000    52.705
+0.15000    47.120
+0.20000    41.566
+0.25000    36.103
+0.30000    30.556
+0.35000    24.739
+0.40000    18.758
+0.45000    13.087
+0.50000     7.183
+0.55000     0.643
+0.60000    -5.537
+0.65000   -13.123
+0.70000   -21.075
+0.75000   -29.986
+0.80000   -37.511
+0.85000   -41.923
+0.90000   -44.464
+0.95000   -46.561
+1.00000   -49.023
+-----------------
+   dG =     4.875
+
+The correlated gradient (DV/DL) components from _every_single_ step (kcal/mol):
+Lambda       BOND     ANGLE     DIHED    1-4 NB   1-4 EEL   VDWAALS     EELEC RESTRAINT
+---------------------------------------------------------------------------------------
+0.00000    54.612     0.278     0.000     0.000     0.000     8.569     0.000     0.000
+0.05000    49.371     0.271     0.000     0.000     0.000     8.377     0.000     0.000
+0.10000    44.127     0.263     0.000     0.000     0.000     8.275     0.000     0.000
+0.15000    38.865     0.252     0.000     0.000     0.000     8.070     0.000     0.000
+0.20000    33.617     0.247     0.000     0.000     0.000     7.769     0.000     0.000
+0.25000    28.377     0.237     0.000     0.000     0.000     7.532     0.000     0.000
+0.30000    23.141     0.233     0.000     0.000     0.000     7.141     0.000     0.000
+0.35000    17.904     0.228     0.000     0.000     0.000     6.632     0.000     0.000
+0.40000    12.680     0.220     0.000     0.000     0.000     6.028     0.000     0.000
+0.45000     7.448     0.217     0.000     0.000     0.000     5.441     0.000     0.000
+0.50000     2.241     0.214     0.000     0.000     0.000     4.677     0.000     0.000
+0.55000    -2.978     0.213     0.000     0.000     0.000     3.439     0.000     0.000
+0.60000    -8.156     0.211     0.000     0.000     0.000     2.244     0.000     0.000
+0.65000   -13.345     0.209     0.000     0.000     0.000     0.086     0.000     0.000
+0.70000   -18.528     0.211     0.000     0.000     0.000    -2.761     0.000     0.000
+0.75000   -23.702     0.212     0.000     0.000     0.000    -6.773     0.000     0.000
+0.80000   -28.841     0.213     0.000     0.000     0.000    -8.955     0.000     0.000
+0.85000   -33.978     0.219     0.000     0.000     0.000    -8.190     0.000     0.000
+0.90000   -39.066     0.222     0.000     0.000     0.000    -5.471     0.000     0.000
+0.95000   -44.167     0.229     0.000     0.000     0.000    -2.492     0.000     0.000
+1.00000   -49.211     0.237     0.000     0.000     0.000    -0.119     0.000     0.000
+---------------------------------------------------------------------------------------
+   dG =     2.386     0.229     0.000     0.000     0.000     2.265     0.000     0.000
+
+--- Parser Amber finished ---
+
+
+Number of correlated and uncorrelated samples:
+
+ State            N          N_k        N/N_k
+
+     0         4601         4553         1.01
+     1         4601         4151         1.11
+     2         4601         4075         1.13
+     3         4601         4067         1.13
+     4         4601         4135         1.11
+     5         4601         4345         1.06
+     6         4601         4251         1.08
+     7         4601         4049         1.14
+     8         4601         3924         1.17
+     9         4601         3645         1.26
+    10         4601         3919         1.17
+    11         4601         3477         1.32
+    12         4601         3043         1.51
+    13         4601         2766         1.66
+    14         4601         2382         1.93
+    15         4601         1519         3.03
+    16         4601         1567         2.94
+    17         4601         2283         2.02
+    18         4601         3090         1.49
+    19         4601         3897         1.18
+    20         4601         4291         1.07
+
+Estimating the free energy change with MBAR...
+MBAR weights converged within tolerance, despite the SciPy Warnings. Please validate your results.
+Estimating the free energy change with TI, TI-CUBIC, BAR...
+------------ ------------------------- ------------------------- ------------------------- ------------------------- 
+   States             TI (kcal/mol)       TI-CUBIC (kcal/mol)            BAR (kcal/mol)           MBAR (kcal/mol)    
+------------ ------------------------- ------------------------- ------------------------- ------------------------- 
+   0 -- 1         3.03643  +-  0.00478      3.03569  +-  0.00542      3.03899  +-  0.00492      2.69218  +-  0.00504 
+   1 -- 2         2.76662  +-  0.00504      2.76701  +-  0.00568      2.76590  +-  0.00522      2.53399  +-  0.00493 
+   2 -- 3         2.49388  +-  0.00509      2.49454  +-  0.00583      2.49331  +-  0.00529      2.34419  +-  0.00500 
+   3 -- 4         2.21599  +-  0.00509      2.21553  +-  0.00584      2.21264  +-  0.00524      2.12449  +-  0.00516 
+   4 -- 5         1.94075  +-  0.00503      1.94059  +-  0.00577      1.93407  +-  0.00519      1.87904  +-  0.00537 
+   5 -- 6         1.66593  +-  0.00500      1.66680  +-  0.00574      1.66141  +-  0.00520      1.61368  +-  0.00559 
+   6 -- 7         1.38166  +-  0.00518      1.38303  +-  0.00594      1.37964  +-  0.00537      1.33525  +-  0.00582 
+   7 -- 8         1.08584  +-  0.00543      1.08524  +-  0.00623      1.08194  +-  0.00568      1.05045  +-  0.00604 
+   8 -- 9         0.79477  +-  0.00564      0.79345  +-  0.00647      0.79125  +-  0.00593      0.76440  +-  0.00628 
+   9 -- 10        0.50904  +-  0.00575      0.51229  +-  0.00661      0.49520  +-  0.00601      0.47869  +-  0.00658 
+  10 -- 11        0.19879  +-  0.00613      0.19940  +-  0.00704      0.19791  +-  0.00634      0.18880  +-  0.00706 
+  11 -- 12       -0.12564  +-  0.00682     -0.12425  +-  0.00784     -0.12304  +-  0.00702     -0.12033  +-  0.00791 
+  12 -- 13       -0.47097  +-  0.00762     -0.46666  +-  0.00875     -0.47028  +-  0.00799     -0.48238  +-  0.00946 
+  13 -- 14       -0.85636  +-  0.00853     -0.85497  +-  0.00982     -0.85527  +-  0.00896     -0.93885  +-  0.01185 
+  14 -- 15       -1.26713  +-  0.01037     -1.26433  +-  0.01187     -1.24777  +-  0.01084     -1.46001  +-  0.01355 
+  15 -- 16       -1.68130  +-  0.01117     -1.69220  +-  0.01275     -1.71587  +-  0.01202     -1.89795  +-  0.01239 
+  16 -- 17       -1.98705  +-  0.00945     -2.00046  +-  0.01084     -2.03472  +-  0.00955     -2.14095  +-  0.00947 
+  17 -- 18       -2.15820  +-  0.00707     -2.16093  +-  0.00815     -2.19179  +-  0.00699     -2.21796  +-  0.00703 
+  18 -- 19       -2.27921  +-  0.00562     -2.27995  +-  0.00640     -2.29398  +-  0.00568     -2.20946  +-  0.00572 
+  19 -- 20       -2.39040  +-  0.00508     -2.38961  +-  0.00573     -2.39420  +-  0.00525     -2.17316  +-  0.00533 
+------------ ------------------------- ------------------------- ------------------------- ------------------------- 
+    TOTAL:        4.87344  +-  0.04251      4.86021  +-  0.04267      4.72536  +-  0.03145      3.36409  +-  0.08185 
+
+********************************************************************************************************************
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII   The above table has been stored in   IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII          test_aa/results.txt           IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII     while the full-precision data      IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII (along with the simulation profile) in IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII         test_aa/results.pickle         IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+********************************************************************************************************************
+Plotting the free energy breakdown figure...
+
+Time spent: 0 hours, 0 minutes, and 24.20 seconds.
+Finished on Mon Jan 30 18:33:19 2017

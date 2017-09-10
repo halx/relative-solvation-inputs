@@ -1,0 +1,2 @@
+-O -i ti0.in -p ../../../state1.parm7 -c %P_0.rst7 -inf %C_0.info -o %C_0.out -r %C_0.rst7 -e %C_0.en -x %C_0.nc
+-O -i ti1.in -p ../../../state1.parm7 -c %P_1.rst7 -inf %C_1.info -o %C_1.out -r %C_1.rst7 -e %C_1.en -x %C_1.nc

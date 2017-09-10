@@ -1,0 +1,15 @@
+minimisation
+ &cntrl
+   imin = 1, ntmin = 2, maxcyc = 100, ncyc = 30,
+   ntwe = 100, ntpr = 10, ntwr = 100,
+
+   ntc = 2, ntf = 1,
+   noshakemask = ':1,2',
+
+   icfe = 1, ifsc = 0, clambda = 0.5,
+   ifmbar = 2, bar_intervall = 500,
+   timask1 = ':1', timask2 = ':2',
+   crgmask = ':1@H14,C15,H16,H17,C18,H19,H20,C21,H22,H23,C24,H25,H26'
+ /
+ &ewald
+ /

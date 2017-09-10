@@ -1,0 +1,22 @@
+TI simulation
+ &cntrl
+   imin = 0, nstlim = 500000, irest = %R1%, ntx = %R2%, dt = 0.001,
+   ntt = 3, temp0 = 298.0, gamma_ln = 2.0, ig = -1,
+   ntp = 1, barostat = 2, mcbarint = 100, pres0 = 1.01325, taup = 2.0,
+   ntb = 2,
+   ioutfm = 1, iwrap = 1,
+   ntwe = 10000, ntwx = 10000, ntpr = 500, ntwr = 50000, ntave = 100000,
+
+   ntc = 2, ntf = 1, tishake = 1,
+   noshakemask = ':1,2',
+
+   icfe = 1, ifsc = 1, clambda = %L%, scalpha = 0.5, scbeta = 12.0,
+   ifmbar = 1, bar_intervall = 500, bar_l_min = 0.0, bar_l_max = 1.0,
+   bar_l_incr = 0.05,
+   timask1 = ':1', timask2 = ':2',
+   scmask1 = ':1@H6,H7,H8',
+   scmask2 = ''
+ /
+ &ewald
+ / 
+
