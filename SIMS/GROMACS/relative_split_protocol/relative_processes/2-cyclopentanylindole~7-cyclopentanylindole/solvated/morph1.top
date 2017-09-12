@@ -1,0 +1,49 @@
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333
+
+[ atomtypes ]
+;name btype   mass   charge ptype      sigma      epsilon
+#include "pert1.atp"
+
+#include "pert1.itp"
+
+[ moleculetype ]
+WAT 2
+
+[ atoms ]
+1 OW 1 WAT OW  1 -0.834 16.000
+2 HW 1 WAT HW1 1  0.417  1.008
+3 HW 1 WAT HW2 1  0.417  1.008
+
+#ifndef FLEXIBLE
+[ settles ]
+1 1 0.09572 0.15139
+
+[ exclusions ]
+1 2 3
+2 1 3
+3 1 2
+#else
+[ bonds ]
+1 2 1 0.09572 502416.0
+1 3 1 0.09572 502416.0
+
+[ angles ]
+2 1 3 1 104.52 628.02
+#endif
+
+#ifdef POSRES
+#include "posres_WAT.itp"
+#endif
+
+[ system ]
+SysX
+
+[ molecules ]
+; Compound        nmols
+LIG 1
+WAT 1122
+
+
